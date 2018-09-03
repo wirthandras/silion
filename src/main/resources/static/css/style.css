@@ -1,3 +1,7 @@
-article {
+.normal {
     background-color: lightblue;
+}
+
+.error {
+	background-color: red;
 }

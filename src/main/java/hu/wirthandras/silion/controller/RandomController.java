@@ -18,12 +18,18 @@ public class RandomController {
 	public TranslationServiceInterface service;
 
 	private Translation t;
+	
+	private Result res;
 
 	@RequestMapping("random")
 	public String random(Model model) {
-		t = service.getRandom();
-		model.addAttribute("task", t.getBase());
+		model.addAttribute("incorrect", res);
 		model.addAttribute("result", new Result());
+		if (res == null) {
+			t = service.getRandom();
+		}		
+		model.addAttribute("task", t.getBase());
+		
 		return "random";
 	}
 
@@ -31,9 +37,9 @@ public class RandomController {
 	public String randomClicked(@ModelAttribute Result result) {
 		boolean b = service.check(t.getTranslation(), result.getResult());
 		if (b) {
-			System.out.println("Match");
+			res = null;
 		} else {
-			System.out.println("Fail");
+			res = new Result();
 		}
 		return "redirect:random";
 	}

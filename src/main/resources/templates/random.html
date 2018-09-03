@@ -8,8 +8,9 @@
 
 <body>
 	<div th:insert="layouts/frame"></div>
-	<article th:text="${task}">Base Text</article>
-	<article>
+	<article th:if="${incorrect != null}" class="error">Rossz</article>
+	<article th:text="${task}" class="normal">Base Text</article>
+	<article class="normal">
 		<form action="#" th:action="@{/rand}" th:object="${result}"
 			method="post">
 			<input type="text" id="result" name="result" th:text="*{result}"
