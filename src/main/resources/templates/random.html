@@ -12,7 +12,7 @@
 	<article th:text="${task}" class="normal">Base Text</article>
 	<article class="normal">
 		<form action="#" th:action="@{/rand}" th:object="${result}"
-			method="post">
+			method="post" autocomplete="off">
 			<input type="text" id="result" name="result" th:text="*{result}"
 				autofocus /> <input type="submit" value="OK" />
 		</form>
