@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<title>All</title>
+</head>
+
+<body>
+	<div th:insert="layouts/frame"></div>
+	<article th:each="element : ${elements}">
+		<p th:text="${element.base}">Base</p>
+		<p th:text="${element.translation}">Translation</p>
+	</article>
+
+</body>
+
+</html>
