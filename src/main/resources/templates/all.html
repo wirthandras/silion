@@ -8,10 +8,13 @@
 
 <body>
 	<div th:insert="layouts/frame"></div>
-	<article th:each="element : ${elements}" class="normal">
+	<article class="normal">
+		<a href="/new" class="no-dec">+</a>
+	</article>
+	<div th:each="element : ${elements}" class="normal">
 		<p th:text="${element.base}">Base</p>
 		<p th:text="${element.translation}">Translation</p>
-	</article>
+	</div>
 
 </body>
 

@@ -29,7 +29,6 @@ public class RandomController {
 			t = service.getRandom();
 		}		
 		model.addAttribute("task", t.getBase());
-		
 		return "random";
 	}
 
