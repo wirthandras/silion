@@ -3,16 +3,21 @@
 	border: 1px solid #0a96b2;
 	font-family: sans-serif; color : white;
 	/*Padding Our Box*/
-	padding-top: 2em;
+	padding-top: 1em;
 	padding-right: 1em;
 	padding-bottom: 1em;
 	padding-left: 1em;
 	color: white;
-	border-radius: 1em;
+	border-radius: 5px;
 }
 
 .error {
+	border-radius: 5px;
+	border: 1px solid #d60404;
+	font-family: sans-serif;
 	background-color: red;
+	color: #600404;
+	padding: 1em;
 }
 
 body {
@@ -78,7 +83,7 @@ table {
 .inputfield {
 	border-radius: 5px;
 	background-color: #bed8dd;
-	color: white;
+	color: #107f96;
 	border: 1px solid #ccc;
 	padding: 12px 20px;
 	box-shadow: 1px 1px 1px #245425;
