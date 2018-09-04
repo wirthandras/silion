@@ -15,8 +15,8 @@
 	background-color: red;
 }
 
-body { background-color: #aedce5;
-
+body {
+	background-color: #aedce5;
 }
 
 nav {
@@ -26,6 +26,7 @@ nav {
 	margin: 1em;
 	margin-left: 0em;
 	margin-right: 0em;
+	border-radius: 5px;
 }
 
 nav a {
@@ -34,7 +35,7 @@ nav a {
 	display: block;
 	font-family: sans-serif;
 	padding: 1em;
-	
+	border-radius: 5px;	
 }
 
 .no-dec {
@@ -52,17 +53,43 @@ nav a:hover {
 }
 
 .button {
-    background-color: #3e8391;
+    
+  	background-color: #1399b5;
     border: none;
     color: white;
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    border-radius: 1em;
+    font-size: 1em;
+    border-radius: 5px;
+    box-shadow: 1px 2px 3px #245425;
+    margin: 0.5em;    
 }
 
 .button:hover {
-    background-color: #295760;
+    background-color: #107f96;
+}
+
+table {
+	display: inline;
+}
+
+.inputfield {
+	border-radius: 5px;
+	background-color: #bed8dd;
+	color: white;
+	border: 1px solid #ccc;
+	padding: 12px 20px;
+	box-shadow: 1px 1px 1px #245425;
+	margin: 0.2em;
+}
+
+.form {
+	border-radius: 5px;
+	background-color: #17b0cf;
+	padding: 2em;
+	display: block;
+    margin: auto;
+    width: auto;
 }

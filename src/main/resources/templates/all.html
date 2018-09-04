@@ -11,11 +11,17 @@
 	<article class="normal">
 		<a href="/new" class="no-dec">+</a>
 	</article>
-	<div th:each="element : ${elements}" class="normal">
-		<p th:text="${element.base}">Base</p>
-		<p th:text="${element.translation}">Translation</p>
-	</div>
-
+	<table style="width: 80%">
+		<caption>Meglévő szövegek</caption>
+		<tr>
+			<th>English</th>
+			<th>Translation</th>
+		</tr>
+		<tr th:each="element : ${elements}" class="normal">
+			<td th:text="${element.base}">Base</td>
+			<td th:text="${element.translation}">Translation</td>
+		</tr>
+	</table>
 </body>
 
 </html>

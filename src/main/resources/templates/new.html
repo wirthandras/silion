@@ -10,10 +10,22 @@
 	<div th:insert="layouts/frame"></div>
 	<article>
 		<form action="#" th:action="@{/newelement}" th:object="${object}"
-			method="post">
-			<input type="text" id="base" name="base" th:text="*{base}" autofocus />
-			<input type="text" id="translation" name="translation"
-				th:text="*{translation}" /> <input type="submit" value="OK" />
+			class="form" method="post">
+			<dl>
+				<dt>
+					<input type="text" id="base" name="base" th:text="*{base}"
+						class="inputfield" placeholder="Angol szöveg" autofocus
+						autocomplete="off" required/>
+				</dt>
+				<dt>
+					<input type="text" id="translation" name="translation"
+						th:text="*{translation}" class="inputfield"
+						placeholder="Magyar szöveg" autocomplete="off" required/>
+				</dt>
+				<dt>
+					<input type="submit" value="OK" class="button" />
+				</dt>
+			</dl>
 		</form>
 	</article>
 </body>
