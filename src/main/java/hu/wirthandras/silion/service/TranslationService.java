@@ -40,6 +40,7 @@ public class TranslationService implements TranslationServiceInterface {
 			return true;
 		} else {
 			t.incrementAnswered();
+			repository.save(t);
 			return false;
 		}
 	}
