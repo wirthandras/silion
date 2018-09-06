@@ -97,7 +97,7 @@ public class Translation {
 	
 	public String getPercent() {
 		if (answered > 0) {
-			return correct / answered * 100 + "%";
+			return (correct * 100 / answered * 100) / 100 + "%";
 		} else {
 			return 0 + "%";
 		}
