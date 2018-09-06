@@ -8,20 +8,22 @@
 
 <body>
 	<div th:insert="layouts/frame"></div>
-	<article class="normal">
-		<a href="/new" class="no-dec">+</a>
+	<article class="no-dec">
+		<a class="no-dec" href="/new" >Hozzá szeretnék adni egy új szöveget</a>
 	</article>
-	<table style="width: 80%">
+	<article class="no-dec">
+	<table>
 		<caption>Meglévő szövegek</caption>
-		<tr>
-			<th>English</th>
-			<th>Translation</th>
+		<tr class="listhead">
+			<th>Angol</th>
+			<th>Magyar</th>
 		</tr>
 		<tr th:each="element : ${elements}" class="normal">
-			<td th:text="${element.base}">Base</td>
-			<td th:text="${element.translation}">Translation</td>
+			<td th:text="${element.base}" class="normal">Base</td>
+			<td th:text="${element.translation}" class="normal">Translation</td>
 		</tr>
 	</table>
+	</article>
 </body>
 
 </html>

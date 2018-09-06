@@ -24,8 +24,11 @@ public class TranslationService implements TranslationServiceInterface {
 	}
 
 	@Override
+	/**
+	 *  Lower case check
+	 */
 	public boolean check(String original, String input) {
-		return original.equals(input);
+		return original.toLowerCase().equals(input.toLowerCase());
 	}
 
 	@Override

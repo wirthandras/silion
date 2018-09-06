@@ -1,7 +1,6 @@
 .normal {
 	background-color: #17b0cf;
 	border: 1px solid #0a96b2;
-	font-family: sans-serif; color : white;
 	/*Padding Our Box*/
 	padding-top: 1em;
 	padding-right: 1em;
@@ -22,6 +21,9 @@
 
 body {
 	background-color: #aedce5;
+	color: white;
+	font-family: sans-serif;
+	color : white;
 }
 
 nav {
@@ -31,6 +33,14 @@ nav {
 	margin: 1em;
 	margin-left: 0em;
 	margin-right: 0em;
+	border-radius: 5px;
+}
+
+article {
+	display: inline-flex;
+	background-color: #17b0cf;
+	width: 100%;
+	padding: 1em;
 	border-radius: 5px;
 }
 
@@ -46,6 +56,11 @@ nav a {
 .no-dec {
 	text-decoration: none;
 	color: white;
+	margin-top: 1em;
+}
+
+.no-dec:hover {
+	background-color: #12798e;
 }
 
 nav a:hover {
@@ -98,3 +113,18 @@ table {
     margin: auto;
     width: auto;
 }
+
+.list {
+	border-radius: 5px;
+	background-color: #17b0cf;
+	padding: 1em;
+	margin: 1em;
+}
+
+.listhead {
+	border-radius: 5px;
+	background-color: #149eba;
+	padding: 1em;
+	margin: 1em;
+}
+
