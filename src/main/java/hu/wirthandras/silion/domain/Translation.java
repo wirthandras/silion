@@ -13,6 +13,9 @@ public class Translation {
 	public Long id;
 	public String base;
 	public String translation;
+	public int occurences;
+	public int answered;
+	public int correct;
 
 	public Translation() {
 
@@ -54,6 +57,50 @@ public class Translation {
 
 	public void setTranslation(String translation) {
 		this.translation = translation;
+	}
+
+	public int getOccurences() {
+		return occurences;
+	}
+
+	public void setOccurences(int occurences) {
+		this.occurences = occurences;
+	}
+	
+	public void incrementOccurences() {
+		this.occurences++;
+	}
+	
+	public void incrementAnswered() {
+		this.answered++;
+	}
+	
+	public void incrementCorrect() {
+		this.correct++;
+	}
+
+	public int getAnswered() {
+		return answered;
+	}
+
+	public void setAnswered(int answered) {
+		this.answered = answered;
+	}
+
+	public int getCorrect() {
+		return correct;
+	}
+
+	public void setCorrect(int correct) {
+		this.correct = correct;
+	}
+	
+	public String getPercent() {
+		if (answered > 0) {
+			return correct / answered * 100 + "%";
+		} else {
+			return 0 + "%";
+		}
 	}
 
 }

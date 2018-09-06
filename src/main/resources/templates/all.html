@@ -17,10 +17,18 @@
 		<tr class="listhead">
 			<th>Angol</th>
 			<th>Magyar</th>
+			<th>Mutatva</th>
+			<th>Válaszolva</th>
+			<th>Talált</th>
+			<th>Találti pontosság</th>
 		</tr>
 		<tr th:each="element : ${elements}" class="normal">
 			<td th:text="${element.base}" class="normal">Base</td>
 			<td th:text="${element.translation}" class="normal">Translation</td>
+			<td th:text="${element.occurences}" class="normal">Kijelezve</td>
+			<td th:text="${element.answered}" class="normal">Megválaszolva</td>
+			<td th:text="${element.correct}" class="normal">Talált</td>
+			<td th:text="${element.getPercent()}" class="normal">Arány</td>
 		</tr>
 	</table>
 	</article>

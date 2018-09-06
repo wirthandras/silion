@@ -14,21 +14,34 @@ public class TranslationService implements TranslationServiceInterface {
 
 	@Autowired
 	private TranslationRepository repository;
+	
+	private Translation t;
 
 	@Override
 	public Translation getRandom() {
 		List<Translation> translations = repository.findAll();
 		Random r = new Random();
 		int randomIndex = r.nextInt(translations.size());
-		return translations.get(randomIndex);
+		t = translations.get(randomIndex);
+		t.incrementOccurences();
+		repository.save(t);
+		return t;
 	}
 
 	@Override
 	/**
-	 *  Lower case check
+	 * Lower case check
 	 */
 	public boolean check(String original, String input) {
-		return original.toLowerCase().equals(input.toLowerCase());
+		if (original.toLowerCase().equals(input.toLowerCase())) {
+			t.incrementAnswered();
+			t.incrementCorrect();
+			repository.save(t);
+			return true;
+		} else {
+			t.incrementAnswered();
+			return false;
+		}
 	}
 
 	@Override
