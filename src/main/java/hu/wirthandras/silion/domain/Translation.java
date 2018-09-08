@@ -4,17 +4,27 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 
 @Entity
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Translation {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@XmlElement
 	public Long id;
+	@XmlElement
 	public String base;
+	@XmlElement
 	public String translation;
+	@XmlElement
 	public int occurences;
+	@XmlElement
 	public int answered;
+	@XmlElement
 	public int correct;
 
 	public Translation() {
