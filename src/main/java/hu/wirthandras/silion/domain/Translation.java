@@ -105,11 +105,11 @@ public class Translation {
 		this.correct = correct;
 	}
 	
-	public String getPercent() {
+	public int getPercent() {
 		if (answered > 0) {
-			return (correct * 100 / answered * 100) / 100 + "%";
+			return (correct * 100 / answered * 100) / 100;
 		} else {
-			return 0 + "%";
+			return 0;
 		}
 	}
 

@@ -28,7 +28,7 @@
 			<td th:text="${element.occurences}" class="normal">Kijelezve</td>
 			<td th:text="${element.answered}" class="normal">Megválaszolva</td>
 			<td th:text="${element.correct}" class="normal">Talált</td>
-			<td th:text="${element.getPercent()}" class="normal">Arány</td>
+			<td th:text="${element.getPercent() + '%'}" class="normal">Arány</td>
 		</tr>
 	</table>
 	</article>
