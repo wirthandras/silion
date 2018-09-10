@@ -12,15 +12,15 @@ import hu.wirthandras.silion.domain.Translation;
 import hu.wirthandras.silion.service.TranslationServiceInterface;
 
 @Controller
-public class AllController {
+public class TranslationController {
 
 	@Autowired
 	private TranslationServiceInterface tsi;
 
-	@RequestMapping("all")
+	@RequestMapping("translations")
 	public String getTranslations(Model model) {
 		model.addAttribute("elements", tsi.getAll());
-		return "all";
+		return "translations";
 	}
 	
 	@RequestMapping("translations/remove/{id}")
@@ -29,7 +29,7 @@ public class AllController {
 		if (t.isPresent()) {
 			tsi.delete(t.get());
 		}	
-		return "all";
+		return "translations";
 	}
 
 }
