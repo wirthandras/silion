@@ -23,7 +23,7 @@ public class AllController {
 		return "all";
 	}
 	
-	@RequestMapping("translations/{id}")
+	@RequestMapping("translations/remove/{id}")
 	public String get(@PathVariable("id") Long id) {
 		Optional<Translation> t = tsi.find(id);
 		if (t.isPresent()) {
