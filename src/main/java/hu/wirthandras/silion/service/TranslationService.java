@@ -1,6 +1,7 @@
 package hu.wirthandras.silion.service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ public class TranslationService implements TranslationServiceInterface {
 
 	@Autowired
 	private TranslationRepository repository;
-	
+
 	private Translation t;
 
 	@Override
@@ -54,6 +55,17 @@ public class TranslationService implements TranslationServiceInterface {
 	@Override
 	public List<Translation> getAll() {
 		return repository.findAll();
+	}
+
+	@Override
+	public void delete(Translation transation) {
+		repository.delete(transation);
+	}
+
+	@Override
+	public Optional<Translation> find(Long primaryKey) {
+		Optional<Translation> t = repository.findById(primaryKey);
+		return t;
 	}
 
 }
