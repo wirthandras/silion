@@ -9,7 +9,8 @@
 <body>
 	<div th:insert="layouts/frame"></div>
 	<div class="center">
-		<article th:if="${incorrect != null}" class="error">Nem talált, kérem próbálja újra!</article>
+		<article th:if="${incorrect != null}" class="error">Nem
+			talált, kérem próbálja újra!</article>
 		<article th:text="${task}" class="normal">Base Text</article>
 		<article class="normal">
 			<form action="#" th:action="@{/rand}" th:object="${result}"
@@ -17,13 +18,16 @@
 				<dl>
 					<dt>
 						<input type="text" id="result" name="result" th:text="*{result}"
-							autofocus class="inputfield" placeholder="Válasz" required/>
-					</dt>
-					<dt>
-						<input type="submit" value="OK" class="button" />
+							autofocus class="inputfield" placeholder="Válasz" required />
 					</dt>
 				</dl>
 			</form>
+		</article>
+		<article class="normal">
+			<details>
+				<summary>Segítség</summary>
+				<p th:text="${help}">Fordítás</p>
+			</details>
 		</article>
 	</div>
 </body>
