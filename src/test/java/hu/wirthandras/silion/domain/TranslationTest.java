@@ -29,7 +29,7 @@ public class TranslationTest {
 		Assert.assertEquals(1, t.getOccurences());
 		Assert.assertEquals(0, t.getAnswered());
 		Assert.assertEquals(0, t.getCorrect());
-		Assert.assertEquals("0%", t.getPercent());
+		Assert.assertEquals(0, t.getPercent());
 	}
 	
 	@Test
@@ -39,7 +39,7 @@ public class TranslationTest {
 		Assert.assertEquals(1, t.getOccurences());
 		Assert.assertEquals(1, t.getAnswered());
 		Assert.assertEquals(0, t.getCorrect());
-		Assert.assertEquals("0%", t.getPercent());
+		Assert.assertEquals(0, t.getPercent());
 	}
 	
 	@Test
@@ -50,7 +50,7 @@ public class TranslationTest {
 		Assert.assertEquals(1, t.getOccurences());
 		Assert.assertEquals(1, t.getAnswered());
 		Assert.assertEquals(1, t.getCorrect());
-		Assert.assertEquals("100%", t.getPercent());
+		Assert.assertEquals(100, t.getPercent());
 	}
 	
 	@Test
@@ -64,7 +64,7 @@ public class TranslationTest {
 		Assert.assertEquals(10, t.getOccurences());
 		Assert.assertEquals(6, t.getAnswered());
 		Assert.assertEquals(3, t.getCorrect());
-		Assert.assertEquals("50%", t.getPercent());
+		Assert.assertEquals(50, t.getPercent());
 	}
 	
 }
