@@ -9,30 +9,33 @@
 <body>
 	<div th:insert="layouts/frame"></div>
 	<article class="no-dec">
-		<a class="no-dec" href="/new" >Hozzá szeretnék adni egy új szöveget</a>
+		<a class="no-dec" href="/new">Hozzá szeretnék adni egy új szöveget</a>
 	</article>
 	<article class="no-dec">
-	<table>
-		<caption>Meglévő szövegek</caption>
-		<tr class="listhead">
-			<th>Angol</th>
-			<th>Magyar</th>
-			<th>Mutatva</th>
-			<th>Válaszolva</th>
-			<th>Talált</th>
-			<th>Találti pontosság</th>
-			<th>Kikapcsolva</th>
-		</tr>
-		<tr th:each="element : ${elements}" class="normal">
-			<td th:text="${element.base}" class="normal">Base</td>
-			<td th:text="${element.translation}" class="normal">Translation</td>
-			<td th:text="${element.occurences}" class="normal">Kijelezve</td>
-			<td th:text="${element.answered}" class="normal">Megválaszolva</td>
-			<td th:text="${element.correct}" class="normal">Talált</td>
-			<td th:text="${element.getPercent() + '%'}" class="normal">Arány</td>
-			<td th:text="${element.disabled}" class="normal">Kikapcsolva</td>
-		</tr>
-	</table>
+		<table>
+			<caption>Meglévő szövegek</caption>
+			<tr class="listhead">
+				<th>Angol</th>
+				<th>Magyar</th>
+				<th>Mutatva</th>
+				<th>Válaszolva</th>
+				<th>Talált</th>
+				<th>Találti pontosság</th>
+				<th>Státusz</th>
+			</tr>
+			<tr th:each="element : ${elements}" class="normal">
+				<td th:text="${element.base}" class="normal">Base</td>
+				<td th:text="${element.translation}" class="normal">Translation</td>
+				<td th:text="${element.occurences}" class="normal">Kijelezve</td>
+				<td th:text="${element.answered}" class="normal">Megválaszolva</td>
+				<td th:text="${element.correct}" class="normal">Talált</td>
+				<td th:text="${element.getPercent() + '%'}" class="normal">Arány</td>
+				<td th:if="${!element.disabled}" class="normal"><img
+					src='images/green.png' /></td>
+				<td th:if="${element.disabled}" class="normal"><img
+					src='images/red.png' /></td>
+			</tr>
+		</table>
 	</article>
 </body>
 
