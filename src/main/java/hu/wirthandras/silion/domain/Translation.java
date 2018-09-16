@@ -30,7 +30,7 @@ public class Translation {
 	public Boolean disabled = false;
 
 	public Translation() {
-
+		
 	}
 
 	public Translation(Long id, String base, String translation) {
@@ -122,7 +122,5 @@ public class Translation {
 	public void setDisabled(Boolean disabled) {
 		this.disabled = disabled;
 	}
-	
-	
 
 }
