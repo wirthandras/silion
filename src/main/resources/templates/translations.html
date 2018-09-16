@@ -21,6 +21,7 @@
 			<th>Válaszolva</th>
 			<th>Talált</th>
 			<th>Találti pontosság</th>
+			<th>Kikapcsolva</th>
 		</tr>
 		<tr th:each="element : ${elements}" class="normal">
 			<td th:text="${element.base}" class="normal">Base</td>
@@ -29,6 +30,7 @@
 			<td th:text="${element.answered}" class="normal">Megválaszolva</td>
 			<td th:text="${element.correct}" class="normal">Talált</td>
 			<td th:text="${element.getPercent() + '%'}" class="normal">Arány</td>
+			<td th:text="${element.disabled}" class="normal">Kikapcsolva</td>
 		</tr>
 	</table>
 	</article>

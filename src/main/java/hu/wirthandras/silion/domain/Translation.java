@@ -26,6 +26,8 @@ public class Translation {
 	public int answered;
 	@XmlElement
 	public int correct;
+	@XmlElement
+	public Boolean disabled = false;
 
 	public Translation() {
 
@@ -112,5 +114,15 @@ public class Translation {
 			return 0;
 		}
 	}
+
+	public Boolean isDisabled() {
+		return disabled;
+	}
+
+	public void setDisabled(Boolean disabled) {
+		this.disabled = disabled;
+	}
+	
+	
 
 }
