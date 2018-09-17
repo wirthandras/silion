@@ -31,5 +31,14 @@ public class TranslationController {
 		}	
 		return "translations";
 	}
+	
+	@RequestMapping("translation/{id}")
+	public String detailed(@PathVariable("id") Long id, Model model) {
+		Optional<Translation> t = tsi.find(id);
+		if (t.isPresent()) {
+			model.addAttribute("translation", t.get());
+		}	
+		return "translation";
+	}
 
 }

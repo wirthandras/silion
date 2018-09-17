@@ -22,8 +22,10 @@
 				<th>Talált</th>
 				<th>Találti pontosság</th>
 				<th>Státusz</th>
+				<th>Részletek</th>
 			</tr>
 			<tr th:each="element : ${elements}" class="normal">
+				
 				<td th:text="${element.base}" class="normal">Base</td>
 				<td th:text="${element.translation}" class="normal">Translation</td>
 				<td th:text="${element.occurences}" class="normal">Kijelezve</td>
@@ -34,6 +36,7 @@
 					src='images/green.png' /></td>
 				<td th:if="${element.disabled}" class="normal"><img
 					src='images/red.png' /></td>
+				<td class="normal"><a th:href="@{/translation/} + ${element.id}">Link</a></td>
 			</tr>
 		</table>
 	</article>
