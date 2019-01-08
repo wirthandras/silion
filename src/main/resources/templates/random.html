@@ -7,7 +7,7 @@
 </head>
 
 <body>
-	<div th:insert="layouts/frame"></div>
+	<div th:replace="layouts/frame :: navigation"></div>
 	<div class="center">
 		<article th:if="${incorrect != null}" class="error">Nem
 			talált, kérem próbálja újra!</article>

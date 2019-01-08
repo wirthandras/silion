@@ -5,10 +5,8 @@
 <link rel="stylesheet" type="text/css" href="/css/style.css">
 <title>Error</title>
 </head>
-
 <body>
-	<div th:insert="layouts/frame"></div>
-	<article>A keresett oldal nem létezik kérem válasszon a fentiek közül!</article> 
+	<div th:replace="layouts/frame :: navigation"></div>
+	<article>Elnézést, egy nem várt hiba történt!</article>
 </body>
-
 </html>

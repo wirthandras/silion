@@ -3,18 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="/css/style.css">
-<title>Fordítások</title>
+<title>Error</title>
 </head>
-
 <body>
 	<div th:replace="layouts/frame :: navigation"></div>
-	<article>
-		<dl>
-			<dt th:text="${translation.base}">Question</dt>
-			<dt th:text="${translation.translation}">Answer</dt>
-			<dt th:text="${translation.disabled}">Status</dt>
-		</dl>
-	</article>
+	<article>A keresett oldal nem létezik kérem válasszon a fentiek közül!</article>
 </body>
-
 </html>
