@@ -10,5 +10,5 @@ ARG JAR_FILE=target/Silion-0.0.1-SNAPSHOT.jar
 
 ADD ${JAR_FILE} Silion.jar
 
-ENTRYPOINT ["java", "-jar","/Silion.jar"]
+ENTRYPOINT ["java", "-jar","-Dspring.datasource.url=${DATASOURCE}","-Dspring.datasource.username=${USERNAME}","-Dspring.datasource.password=${PASSWORD}","/Silion.jar"]
 
