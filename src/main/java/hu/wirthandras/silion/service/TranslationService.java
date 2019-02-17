@@ -2,7 +2,6 @@ package hu.wirthandras.silion.service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.Random;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -14,6 +13,9 @@ import hu.wirthandras.silion.repository.TranslationRepository;
 public class TranslationService implements TranslationServiceInterface {
 
 	@Autowired
+	private RandomService serviceRandom;
+
+	@Autowired
 	private TranslationRepository repository;
 
 	private Translation t;
@@ -21,9 +23,7 @@ public class TranslationService implements TranslationServiceInterface {
 	@Override
 	public Translation getRandom() {
 		List<Translation> translations = repository.findAll();
-		Random r = new Random();
-		int randomIndex = r.nextInt(translations.size());
-		t = translations.get(randomIndex);
+		t = translations.get(serviceRandom.nextInt(translations.size()));
 		t.incrementOccurences();
 		repository.save(t);
 		return t;
