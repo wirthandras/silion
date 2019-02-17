@@ -34,7 +34,7 @@ public class TranslationService implements TranslationServiceInterface {
 	 * Lower case check
 	 */
 	public boolean check(String original, String input) {
-		if (original.toLowerCase().equals(input.toLowerCase())) {
+		if (original.equalsIgnoreCase(input)) {
 			t.incrementAnswered();
 			t.incrementCorrect();
 			repository.save(t);
