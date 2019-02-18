@@ -3,7 +3,9 @@ package hu.wirthandras.silion.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -21,7 +23,7 @@ public class RandomController {
 	
 	private Result res;
 
-	@RequestMapping("random")
+	@GetMapping("random")
 	public String random(Model model) {
 		model.addAttribute("incorrect", res);
 		model.addAttribute("result", new Result());
@@ -33,7 +35,7 @@ public class RandomController {
 		return "random";
 	}
 
-	@RequestMapping(value = "/rand", method = RequestMethod.POST)
+	@PostMapping("/rand")
 	public String randomClicked(@ModelAttribute Result result) {
 		boolean b = service.check(t.getTranslation(), result.getResult());
 		if (b) {
