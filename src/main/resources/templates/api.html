@@ -10,8 +10,7 @@
 	<div th:replace="layouts/frame :: navigation"></div>
 	<article>
 		<dl>
-			<dt>Az alkalmazás kétféle a kövekező API-kat elérhetőek,
-				melyekkel az összes szövegpár és kapcsolódó adatai elérhetőek:</dt>
+			<dt th:text="#{api.description}">Description</dt>
 			<dt>
 				<a href="/api/json" class="button">JSON</a>
 			</dt>
