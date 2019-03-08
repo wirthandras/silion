@@ -2,12 +2,8 @@ package hu.wirthandras.silion.domain;
 
 public class NewTranslation {
 	
-	public String base;
-	public String translation;
-	
-	public NewTranslation() {
-		
-	}
+	private String base;
+	private String translation;
 
 	public String getBase() {
 		return base;

@@ -2,11 +2,7 @@ package hu.wirthandras.silion.domain;
 
 public class Result {
 
-	public String result;
-	
-	public Result() {
-		
-	}
+	private String result;
 
 	public String getResult() {
 		return result;
